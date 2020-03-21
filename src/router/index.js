@@ -16,6 +16,16 @@ export default new Router({
       path: '/routerTest',
       name: 'routerTest',
       component: RouterTest
+    },
+    {
+      path: '/JspTest',
+      name: 'JspTest',
+      component: JspTest
+    },
+    {
+      path: '/VolumeOutlineTest',
+      name: 'VolumeOutlineTest',
+      component: VolumeOutlineTest
     }
   ]
 })
