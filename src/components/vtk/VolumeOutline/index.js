@@ -35,7 +35,7 @@ ofun.addPoint(0, 0);
 ofun.addPoint(1, 1.0);
 actor.getProperty().setScalarOpacity(0, ofun);
 
-export function createLabelPipeline(backgroundImageData) {
+function createLabelPipeline(backgroundImageData) {
   // Create a labelmap image the same dimensions as our background volume.
   const labelMapData = vtkImageData.newInstance(
     backgroundImageData.get('spacing', 'origin', 'direction')
@@ -84,7 +84,7 @@ export function createLabelPipeline(backgroundImageData) {
   return labelMap;
 }
 
-export function fillBlobForThreshold(imageData, backgroundImageData) {
+function fillBlobForThreshold(imageData, backgroundImageData) {
   const dims = imageData.getDimensions();
   const values = imageData
     .getPointData()
@@ -130,7 +130,7 @@ export default function view (customVtiUrl){
     fetchGzip: true,
   });
   reader
-  .setUrl(`${__BASE_PATH__}/data/volume/headsq.vti`, { loadData: true })
+  .setUrl(`http://kitware.github.io/vtk-js/data/volume/headsq.vti/data/1839938295fe4f0839c9df8d9fa67137.gz`, { loadData: true })
   .then(() => {
     const data = reader.getOutputData();
 

@@ -5,8 +5,8 @@
 </template>
 
 <script>
-  import view from './index'
-  view('test');
+  // import view from './index'
+  // view('test');
   export default {
     name: "VolumeOutlineTest"
   }
